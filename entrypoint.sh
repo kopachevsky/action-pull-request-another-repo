@@ -23,7 +23,8 @@ else
 fi
 
 CLONE_DIR=$(mktemp -d)
-
+echo "env"
+env
 echo "Setting git variables"
 export GITHUB_TOKEN=$API_TOKEN_GITHUB
 git config --global user.email "$INPUT_USER_EMAIL"
