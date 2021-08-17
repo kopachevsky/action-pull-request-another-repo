@@ -4,6 +4,9 @@ inputs:
   title:
     description: 'PR Title'
     required: false
+  comment:
+    description: 'PR Comment'
+    required: false
   source_folder:
     description: 'Source folder from origin'
     required: true

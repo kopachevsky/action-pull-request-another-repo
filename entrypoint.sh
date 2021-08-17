@@ -48,11 +48,11 @@ then
   echo "Pushing git commit"
   git push -u origin HEAD:$INPUT_DESTINATION_HEAD_BRANCH
   echo "Creating a pull request"
-  gh pr create -t $INPUT_TITLE \
-               -b $INPUT_DESTINATION_HEAD_BRANCH \
+  gh pr create -t "$INPUT_TITLE" \
+               -b "$INPUT_COMMENT" \
                -B $INPUT_DESTINATION_BASE_BRANCH \
                -H $INPUT_DESTINATION_HEAD_BRANCH \
-                  $PULL_REQUEST_REVIEWERS
+                  "$PULL_REQUEST_REVIEWERS"
 else
   echo "No changes detected"
 fi
