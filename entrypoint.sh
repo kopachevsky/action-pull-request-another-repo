@@ -34,6 +34,13 @@ git clone "https://$API_TOKEN_GITHUB@github.com/$INPUT_DESTINATION_REPO.git" "$C
 
 echo "Copying contents to git repo"
 mkdir -p $CLONE_DIR/$INPUT_DESTINATION_FOLDER/
+echo "ls current one"
+ls -l .
+echo "ls source folder"
+ls -l $INPUT_SOURCE_FOLDER
+echo "pwd"
+echo $(pwd)
+echo "next"
 cp $INPUT_SOURCE_FOLDER "$CLONE_DIR/$INPUT_DESTINATION_FOLDER/"
 cd "$CLONE_DIR"
 git checkout -b "$INPUT_DESTINATION_HEAD_BRANCH"
