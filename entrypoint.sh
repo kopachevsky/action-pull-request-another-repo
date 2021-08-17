@@ -52,7 +52,7 @@ then
                -b "$INPUT_COMMENT" \
                -B $INPUT_DESTINATION_BASE_BRANCH \
                -H $INPUT_DESTINATION_HEAD_BRANCH \
-                  "$PULL_REQUEST_REVIEWERS"
+                -r "$PULL_REQUEST_REVIEWERS"
 else
   echo "No changes detected"
 fi
